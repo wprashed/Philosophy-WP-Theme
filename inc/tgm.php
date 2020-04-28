@@ -67,11 +67,6 @@ function philosophy_register_required_plugins() {
             'required' => false,
         ),
         array(
-            'name'     => 'Option Tree',
-            'slug'     => 'option-tree',
-            'required' => false,
-        ),
-        array(
             'name'     => 'Attachments',
             'slug'     => 'attachments',
             'required' => false,

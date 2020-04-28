@@ -1,17 +1,27 @@
 /*
-Theme Name: Philosophy Blog
+Theme Name: Philosophy
 Theme URI:
-Author: The Advanced Technologies
-Author URI: http://theadvancedtechnologies.com
-Description: Philosophy Blog by The Advanced Technologies
+Author: Md Rashed Hossain
+Author URI: 
+Description: Philosophy by colorlib
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, education
 Text Domain: philosophy
 */
+.header__logo h1{
+    margin:0px;
+    font-weight: bold;
+}
+
+.header__logo h1 a{
+    color:#fff;
+    text-decoration: none;
+}
+
 /* =WordPress Core
------------------------------------------------------------ */
+-------------------------------------------------------------- */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -90,41 +100,43 @@ a img.aligncenter {
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-	background-color: #eee;
-	clip: auto !important;
-	clip-path: none;
-	color: #444;
-	display: block;
-	font-size: 1em;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
 }
+
 .sticky{
 
 }
-.gallery-caption{
-
+.gallery-caption {
+    visibility: inherit;
 }
+
 .bypostauthor{
-    
+    visibility: inherit;
 }

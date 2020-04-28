@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 
     <!--- basic page needs
     ================================================== -->
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <?php wp_head(); ?>
+
 
 </head>
 
@@ -24,27 +27,25 @@
         <div class="header__content row">
 
             <div class="header__logo">
-                <h1><a href="<?php echo site_url(); ?>"><?php bloginfo( "name" ); ?></a></h1>
+                <?php if(has_custom_logo()){
+                  the_custom_logo();
+                }else{
+                    echo "<h1><a href='".home_url("/")."'>".get_bloginfo('name')."</a></h1>";
+                }
+                ?>
             </div> <!-- end header__logo -->
 
-            <ul class="header__social">
-                <?php
-                    $socialicons = ot_get_option('social', array() );
-
-                    if(! empty($socialicons)){
-                        foreach ($socialicons as $socialicon) {
-                        echo    '<li><a href="'.$socialicon['icon_link'].'" data-placement="top" title="'.$socialicon['title'].'"><i class="fa fa-'.$socialicon['icon_name'].'"></i></a></li>';
-        
-                        }
-                    }
-                ?>
-            </ul> <!-- end header__social -->
+            <?php
+            if(is_active_sidebar("header-section")){
+                dynamic_sidebar("header-section");
+            }
+            ?>
 
             <a class="header__search-trigger" href="#0"></a>
 
             <div class="header__search">
 
-                <?php get_template_part( "/searchform" ); ?>
+                <?php get_search_form(); ?>
 
                 <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
 

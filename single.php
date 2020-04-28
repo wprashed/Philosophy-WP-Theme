@@ -15,12 +15,7 @@ get_header();
                     <?php the_title() ?>
                 </h1>
                 <ul class="s-content__header-meta">
-                    <?php 
-                    $archive_year  = get_the_time('Y'); 
-                    $archive_month = get_the_time('m'); 
-                    $archive_day   = get_the_time('d'); 
-                    ?>
-                    <li class="date"><a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day); ?>"><?php the_date() ?></a></li>
+                    <li class="date"><?php the_date() ?></li>
                     <li class="cat">
                         In
                         <?php the_category( " " ); ?>
@@ -36,7 +31,10 @@ get_header();
 
             <div class="col-full s-content__main">
 
-                <?php the_content(); ?>
+                <?php
+                the_content();
+                wp_link_pages( );
+                ?>
 
                 <p class="s-content__tags">
                     <span>Post Tags</span>
